@@ -58,63 +58,67 @@
         }
 
         .nav-container {
-            max-width: 1200px;
+            max-width: 1250px;       /* Slightly widened to give breathing room to the larger brand identity */
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 14px 20px;
+            padding: 16px 20px;
         }
 
         .logo-area {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 18px;               /* Slightly more gap for prominent spacing */
         }
 
         .logo-box {
-            background: var(--white);
-            padding: 4px;
-            border: 1px solid #e2e8f0;
-            border-radius: 6px;
+            background: transparent;
+            padding: 0;
+            border: none;
+            border-radius: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            box-shadow: none;
         }
 
+        /* PERFECTED FOR LAPTOPS: ENHANCED SIZE SCALE */
         .logo-img {
-            width: 55px;
-            height: 55px;
+            width: 85px;             /* Bumped up from 72px for distinct desktop presence */
+            height: 85px;
             object-fit: contain;
         }
 
+        /* ENHANCED BRAND TYPOGRAPHY FOR LAPTOPS/PC */
         .logo-details h1 {
-            font-size: 21px;         /* Increased slightly */
+            font-size: 28px;         /* Scaled up from 25px for a premium look */
             color: var(--primary);
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            line-height: 1.1;
         }
 
         .logo-details span {
-            font-size: 12px;         /* Increased slightly */
+            font-size: 14px;         /* Scaled up from 13px */
             color: var(--secondary);
             font-weight: 600;
             text-transform: uppercase;
             display: block;
-            margin-top: -2px;
+            margin-top: 4px;
+            letter-spacing: 1.5px;   /* Added sharper letter tracking */
         }
 
         nav ul {
             display: flex;
-            gap: 25px;
+            gap: 28px;               /* Adjusted menu gaps */
             list-style: none;
         }
 
         nav ul li a {
-            font-weight: 600;        /* Bolded up the links slightly */
+            font-weight: 600;        
             color: var(--primary);
-            font-size: 16px;         /* Increased from 15px */
+            font-size: 16px;         
             padding: 8px 0;
             position: relative;
             cursor: pointer;
@@ -147,7 +151,7 @@
             padding: 11px 22px;
             border-radius: 4px;
             font-weight: 600;
-            font-size: 15px;         /* Increased from 14px */
+            font-size: 15px;         
             border: 2px solid var(--primary);
         }
 
@@ -215,13 +219,13 @@
         }
 
         .hero-content h2 {
-            font-size: 48px;         /* Increased from 45px */
+            font-size: 48px;         
             margin-bottom: 22px;
             line-height: 1.25;
         }
 
         .hero-content p {
-            font-size: 20px;         /* Increased from 18px */
+            font-size: 20px;         
             color: #cbd5e1;
             margin-bottom: 35px;
         }
@@ -268,13 +272,13 @@
         }
 
         .cred-card h4 {
-            font-size: 17px;         /* Increased from 16px */
+            font-size: 17px;         
             color: var(--primary);
             margin-bottom: 6px;
         }
 
         .cred-card p {
-            font-size: 14px;         /* Increased from 13px */
+            font-size: 14px;         
             color: var(--gray);
         }
 
@@ -294,7 +298,7 @@
         }
 
         .section-header h3 {
-            font-size: 34px;         /* Increased from 32px */
+            font-size: 34px;         
             color: var(--primary);
             position: relative;
             padding-bottom: 15px;
@@ -341,7 +345,7 @@
         }
 
         .service-preview-card h4 {
-            font-size: 21px;         /* Increased from 19px */
+            font-size: 21px;         
             margin-bottom: 12px;
             color: var(--primary);
         }
@@ -373,7 +377,7 @@
 
         .pillar-card h4 {
             color: var(--secondary);
-            font-size: 20px;         /* Increased from 18px */
+            font-size: 20px;         
             margin-bottom: 10px;
         }
 
@@ -403,7 +407,7 @@
         }
 
         .form-group label {
-            font-size: 14px;         /* Increased from 13px */
+            font-size: 14px;         
             font-weight: 600;
             text-transform: uppercase;
             color: var(--primary);
@@ -416,7 +420,7 @@
             padding: 14px;
             border: 1px solid #cbd5e1;
             border-radius: 4px;
-            font-size: 16px;         /* Size matches input comfort standards */
+            font-size: 16px;         
             background: var(--light);
             outline: none;
         }
@@ -471,7 +475,7 @@
         }
 
         .about-split p {
-            font-size: 17.5px;       /* Made narrative text slightly crispier */
+            font-size: 17.5px;       
         }
 
         .values-box {
@@ -508,7 +512,7 @@
         }
 
         .strategic-panel-card h4 {
-            font-size: 25px;         /* Bumped slightly */
+            font-size: 25px;         
             color: var(--secondary);
             margin-bottom: 15px;
             letter-spacing: 0.5px;
@@ -516,7 +520,7 @@
         }
 
         .strategic-panel-card p {
-            font-size: 16.5px;       /* Increased size */
+            font-size: 16.5px;       
             color: var(--dark);
             line-height: 1.7;
         }
@@ -524,7 +528,7 @@
         /* --- PAGE 3: COMPREHENSIVE SERVICES VIEWS --- */
         .services-tabs-container {
             display: grid;
-            grid-template-columns: 320px 1fr; /* Widened to fit larger fonts */
+            grid-template-columns: 320px 1fr; 
             gap: 40px;
             margin-top: 30px;
         }
@@ -541,7 +545,7 @@
             border-radius: 4px;
             text-align: left;
             font-weight: 600;
-            font-size: 16px;         /* Bumped menu buttons size */
+            font-size: 16px;         
             color: var(--primary);
             border: none;
             box-shadow: 0 2px 5px rgba(0,0,0,0.02);
@@ -570,7 +574,7 @@
         }
 
         .service-tab-content h4 {
-            font-size: 26px;         /* Increased from 24px */
+            font-size: 26px;         
             color: var(--primary);
             margin-bottom: 15px;
             border-bottom: 2px solid var(--light);
@@ -590,7 +594,7 @@
         }
 
         .service-features-list li {
-            font-size: 16px;         /* Increased from 14px */
+            font-size: 16px;         
             display: flex;
             align-items: center;
             gap: 10px;
@@ -603,7 +607,7 @@
         /* --- INDUSTRIES WE SERVE TAB GRID ELEMENTS --- */
         .industries-headline {
             font-family: 'Montserrat', sans-serif;
-            font-size: 24px;         /* Increased from 22px */
+            font-size: 24px;         
             color: var(--primary);
             margin-bottom: 20px;
             text-transform: uppercase;
@@ -621,7 +625,7 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            font-size: 17px;         /* Increased from 16px */
+            font-size: 17px;         
             font-weight: 500;
             color: var(--dark);
         }
@@ -682,14 +686,14 @@
         }
 
         .footer-brand h4 {
-            font-size: 22px;         /* Increased slightly */
+            font-size: 22px;         
             margin-bottom: 10px;
             letter-spacing: 0.5px;
         }
 
         .footer-brand p {
             color: #94a3b8;
-            font-size: 15px;         /* Increased from 14px */
+            font-size: 15px;         
             margin-bottom: 20px;
         }
 
@@ -710,7 +714,7 @@
         }
 
         .footer-links h5, .footer-contact h5 {
-            font-size: 18px;         /* Increased from 16px */
+            font-size: 18px;         
             margin-bottom: 20px;
             position: relative;
             padding-bottom: 8px;
@@ -735,7 +739,7 @@
 
         .footer-links ul li a {
             color: #94a3b8;
-            font-size: 15px;         /* Increased from 14px */
+            font-size: 15px;         
             cursor: pointer;
         }
 
@@ -748,7 +752,7 @@
             display: flex;
             gap: 15px;
             margin-bottom: 15px;
-            font-size: 15px;         /* Increased from 14px */
+            font-size: 15px;         
             color: #94a3b8;
         }
 
@@ -769,7 +773,7 @@
         .copyright-bar {
             text-align: center;
             padding-top: 20px;
-            font-size: 14px;         /* Increased from 13px */
+            font-size: 14px;         
             color: #64748b;
         }
 
@@ -784,22 +788,24 @@
         @media (max-width: 768px) {
             .nav-container {
                 flex-direction: column;
-                gap: 10px;
-                padding: 10px;
+                gap: 12px;
+                padding: 12px;
             }
             .logo-area {
                 width: 100%;
                 justify-content: center;
+                gap: 12px;
             }
+            /* MOBILE SCREEN CONTAINER SCALING - HIGH VISIBILITY COMPACT PRESET */
             .logo-img {
-                width: 42px;
-                height: 42px;
+                width: 55px;
+                height: 55px;
             }
             .logo-details h1 {
-                font-size: 17px;
+                font-size: 19px;
             }
             .logo-details span {
-                font-size: 10px;
+                font-size: 10.5px;
             }
             nav {
                 width: 100%;
@@ -813,7 +819,7 @@
                 gap: 12px;
             }
             nav ul li a {
-                font-size: 13px;       /* Adjusted mobile menu scale up */
+                font-size: 13px;       
                 font-weight: 600;
                 padding: 4px 0;
             }
@@ -1251,4 +1257,5 @@
         });
     </script>
 </body>
-</html>
+    </html>
+ 
