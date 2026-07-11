@@ -16,7 +16,7 @@
             --secondary: #d32f2f;     /* Crimson Cargo Red */
             --dark: #1e293b;          /* Charcoal Text/Accents */
             --light: #f8fafc;         /* Crisp Canvas Background */
-            --gray: #64748b;          /* Muted Slate Subtexts */
+            --gray: #57657a;          /* Adjusted slightly darker for enhanced readability */
             --white: #ffffff;
             --success: #25d366;        /* WhatsApp Green */
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -32,7 +32,8 @@
         body {
             background-color: var(--light);
             color: var(--dark);
-            line-height: 1.6;
+            font-size: 17px;         /* Increased global base from 16px to 17px */
+            line-height: 1.65;
             overflow-x: hidden;
         }
 
@@ -62,7 +63,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 20px;
+            padding: 14px 20px;
         }
 
         .logo-area {
@@ -89,14 +90,14 @@
         }
 
         .logo-details h1 {
-            font-size: 20px;
+            font-size: 21px;         /* Increased slightly */
             color: var(--primary);
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
         .logo-details span {
-            font-size: 11px;
+            font-size: 12px;         /* Increased slightly */
             color: var(--secondary);
             font-weight: 600;
             text-transform: uppercase;
@@ -111,9 +112,9 @@
         }
 
         nav ul li a {
-            font-weight: 500;
+            font-weight: 600;        /* Bolded up the links slightly */
             color: var(--primary);
-            font-size: 15px;
+            font-size: 16px;         /* Increased from 15px */
             padding: 8px 0;
             position: relative;
             cursor: pointer;
@@ -143,10 +144,10 @@
         .cta-btn {
             background: var(--primary);
             color: var(--white);
-            padding: 10px 20px;
+            padding: 11px 22px;
             border-radius: 4px;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 15px;         /* Increased from 14px */
             border: 2px solid var(--primary);
         }
 
@@ -208,19 +209,19 @@
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
             text-align: center;
         }
 
         .hero-content h2 {
-            font-size: 45px;
-            margin-bottom: 20px;
-            line-height: 1.2;
+            font-size: 48px;         /* Increased from 45px */
+            margin-bottom: 22px;
+            line-height: 1.25;
         }
 
         .hero-content p {
-            font-size: 18px;
+            font-size: 20px;         /* Increased from 18px */
             color: #cbd5e1;
             margin-bottom: 35px;
         }
@@ -261,19 +262,19 @@
         }
 
         .cred-card i {
-            font-size: 32px;
+            font-size: 34px;
             color: var(--secondary);
             margin-bottom: 12px;
         }
 
         .cred-card h4 {
-            font-size: 16px;
+            font-size: 17px;         /* Increased from 16px */
             color: var(--primary);
-            margin-bottom: 5px;
+            margin-bottom: 6px;
         }
 
         .cred-card p {
-            font-size: 13px;
+            font-size: 14px;         /* Increased from 13px */
             color: var(--gray);
         }
 
@@ -293,7 +294,7 @@
         }
 
         .section-header h3 {
-            font-size: 32px;
+            font-size: 34px;         /* Increased from 32px */
             color: var(--primary);
             position: relative;
             padding-bottom: 15px;
@@ -334,15 +335,19 @@
         }
 
         .service-preview-card i {
-            font-size: 35px;
+            font-size: 38px;
             color: var(--primary);
             margin-bottom: 20px;
         }
 
         .service-preview-card h4 {
-            font-size: 19px;
+            font-size: 21px;         /* Increased from 19px */
             margin-bottom: 12px;
             color: var(--primary);
+        }
+
+        .service-preview-card p {
+            font-size: 16px;
         }
 
         /* Core Pillars Section */
@@ -368,8 +373,12 @@
 
         .pillar-card h4 {
             color: var(--secondary);
-            font-size: 18px;
+            font-size: 20px;         /* Increased from 18px */
             margin-bottom: 10px;
+        }
+
+        .pillar-card p {
+            font-size: 16px;
         }
 
         /* Customized Form Section */
@@ -394,7 +403,7 @@
         }
 
         .form-group label {
-            font-size: 13px;
+            font-size: 14px;         /* Increased from 13px */
             font-weight: 600;
             text-transform: uppercase;
             color: var(--primary);
@@ -404,10 +413,10 @@
 
         .form-group input, .form-group textarea {
             width: 100%;
-            padding: 12px;
+            padding: 14px;
             border: 1px solid #cbd5e1;
             border-radius: 4px;
-            font-size: 15px;
+            font-size: 16px;         /* Size matches input comfort standards */
             background: var(--light);
             outline: none;
         }
@@ -420,7 +429,7 @@
             background: var(--success); /* WhatsApp Green Accent */
             color: var(--white);
             width: 100%;
-            padding: 14px;
+            padding: 15px;
             border: none;
             border-radius: 4px;
             font-weight: 700;
@@ -433,6 +442,7 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
+            font-size: 16px;
         }
 
         .submit-btn:hover {
@@ -460,6 +470,10 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
         }
 
+        .about-split p {
+            font-size: 17.5px;       /* Made narrative text slightly crispier */
+        }
+
         .values-box {
             background: var(--white);
             padding: 30px;
@@ -468,15 +482,49 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.02);
         }
 
+        .value-item {
+            font-size: 16.5px;
+        }
+
         .value-item i {
             color: var(--secondary);
             margin-right: 8px;
         }
 
+        /* --- CORE STRATEGIC VISION & MISSION MODULES --- */
+        .strategic-grid-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .strategic-panel-card {
+            background: var(--white);
+            padding: 35px;
+            border-radius: 6px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.02);
+            border-top: 4px solid var(--secondary);
+        }
+
+        .strategic-panel-card h4 {
+            font-size: 25px;         /* Bumped slightly */
+            color: var(--secondary);
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .strategic-panel-card p {
+            font-size: 16.5px;       /* Increased size */
+            color: var(--dark);
+            line-height: 1.7;
+        }
+
         /* --- PAGE 3: COMPREHENSIVE SERVICES VIEWS --- */
         .services-tabs-container {
             display: grid;
-            grid-template-columns: 300px 1fr;
+            grid-template-columns: 320px 1fr; /* Widened to fit larger fonts */
             gap: 40px;
             margin-top: 30px;
         }
@@ -489,10 +537,11 @@
 
         .service-menu-btn {
             background: var(--white);
-            padding: 15px 20px;
+            padding: 16px 22px;
             border-radius: 4px;
             text-align: left;
             font-weight: 600;
+            font-size: 16px;         /* Bumped menu buttons size */
             color: var(--primary);
             border: none;
             box-shadow: 0 2px 5px rgba(0,0,0,0.02);
@@ -521,11 +570,15 @@
         }
 
         .service-tab-content h4 {
-            font-size: 24px;
+            font-size: 26px;         /* Increased from 24px */
             color: var(--primary);
             margin-bottom: 15px;
             border-bottom: 2px solid var(--light);
             padding-bottom: 10px;
+        }
+
+        .service-tab-content p {
+            font-size: 17px;
         }
 
         .service-features-list {
@@ -537,7 +590,7 @@
         }
 
         .service-features-list li {
-            font-size: 14px;
+            font-size: 16px;         /* Increased from 14px */
             display: flex;
             align-items: center;
             gap: 10px;
@@ -545,6 +598,70 @@
 
         .service-features-list li i {
             color: var(--secondary);
+        }
+
+        /* --- INDUSTRIES WE SERVE TAB GRID ELEMENTS --- */
+        .industries-headline {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;         /* Increased from 22px */
+            color: var(--primary);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .industries-list-box {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .industry-bullet-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 17px;         /* Increased from 16px */
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        .industry-bullet-row i {
+            color: var(--secondary);
+            font-size: 10px;
+        }
+
+        /* --- PAGE 4: COMPLIANCE LABELS SUBSYSTEM --- */
+        .compliance-wrapper-text {
+            font-size: 17.5px;
+        }
+        
+        .commitment-list {
+            list-style: none;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .commitment-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .commitment-number {
+            background: var(--secondary);
+            color: var(--white);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+            flex-shrink: 0;
         }
 
         /* --- GLOBAL FOOTER SECTION --- */
@@ -565,14 +682,14 @@
         }
 
         .footer-brand h4 {
-            font-size: 20px;
+            font-size: 22px;         /* Increased slightly */
             margin-bottom: 10px;
             letter-spacing: 0.5px;
         }
 
         .footer-brand p {
             color: #94a3b8;
-            font-size: 14px;
+            font-size: 15px;         /* Increased from 14px */
             margin-bottom: 20px;
         }
 
@@ -593,7 +710,7 @@
         }
 
         .footer-links h5, .footer-contact h5 {
-            font-size: 16px;
+            font-size: 18px;         /* Increased from 16px */
             margin-bottom: 20px;
             position: relative;
             padding-bottom: 8px;
@@ -618,7 +735,7 @@
 
         .footer-links ul li a {
             color: #94a3b8;
-            font-size: 14px;
+            font-size: 15px;         /* Increased from 14px */
             cursor: pointer;
         }
 
@@ -631,7 +748,7 @@
             display: flex;
             gap: 15px;
             margin-bottom: 15px;
-            font-size: 14px;
+            font-size: 15px;         /* Increased from 14px */
             color: #94a3b8;
         }
 
@@ -652,7 +769,7 @@
         .copyright-bar {
             text-align: center;
             padding-top: 20px;
-            font-size: 13px;
+            font-size: 14px;         /* Increased from 13px */
             color: #64748b;
         }
 
@@ -661,12 +778,54 @@
             .services-tabs-container { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; gap: 35px; }
             .about-split { grid-template-columns: 1fr; }
+            .strategic-grid-box { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 768px) {
-            nav { display: none; }
-            .hero-content h2 { font-size: 32px; }
-            .service-features-list { grid-template-columns: 1fr; }
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+            }
+            .logo-area {
+                width: 100%;
+                justify-content: center;
+            }
+            .logo-img {
+                width: 42px;
+                height: 42px;
+            }
+            .logo-details h1 {
+                font-size: 17px;
+            }
+            .logo-details span {
+                font-size: 10px;
+            }
+            nav {
+                width: 100%;
+                border-top: 1px solid #f1f5f9;
+                padding-top: 8px;
+            }
+            nav ul {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+            nav ul li a {
+                font-size: 13px;       /* Adjusted mobile menu scale up */
+                font-weight: 600;
+                padding: 4px 0;
+            }
+            .header-actions {
+                display: none; 
+            }
+            .services-tabs-container {
+                grid-template-columns: 1fr;
+            }
+            .hero-content h2 { font-size: 34px; }
+            .hero-content p { font-size: 17px; }
+            .section-header h3 { font-size: 28px; }
         }
     </style>
 </head>
@@ -689,6 +848,7 @@
                     <li><a onclick="switchView('home-view')" id="nav-home-view" class="active">Home</a></li>
                     <li><a onclick="switchView('about-view')" id="nav-about-view">About Us</a></li>
                     <li><a onclick="switchView('services-view')" id="nav-services-view">Services</a></li>
+                    <li><a onclick="switchView('compliance-view')" id="nav-compliance-view">Compliance</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
@@ -699,7 +859,7 @@
 
     <!-- --- DUAL FLOATING STICKY QUICK ACTIONS --- -->
     <div class="floating-actions">
-        <a href="https://wa.me/919510924293" target="_blank" class="float-btn float-wa" title="Chat on WhatsApp">
+        <a href="https://wa.me/91510924293" target="_blank" class="float-btn float-wa" title="Chat on WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
         <a href="tel:+919723172545" class="float-btn float-call" title="Call Operations Direct">
@@ -719,7 +879,7 @@
                 <p>Licensed Customs Broker & End-to-End Multimodal Supply Chain Solutions operating directly out of Mundra Port, Gujarat.</p>
                 <div class="hero-btns">
                     <a onclick="switchView('services-view')" class="cta-btn btn-secondary" style="cursor:pointer;">Explore Capabilities</a>
-                    <a href="https://wa.me/919510924293" target="_blank" class="cta-btn" style="background:transparent; border-color:var(--white);">Instant Broker Contact</a>
+                    <a href="https://wa.me/91510924293" target="_blank" class="cta-btn" style="background:transparent; border-color:var(--white);">Instant Broker Contact</a>
                 </div>
             </div>
         </section>
@@ -836,11 +996,23 @@
                         <h4 style="color: var(--primary); margin-bottom: 15px;">Core Principles</h4>
                         <div class="value-item"><i class="fas fa-check-circle"></i> <strong>Expertise:</strong> Knowledge-driven, highly compliant trade execution structures.</div>
                         <div class="value-item" style="margin: 10px 0;"><i class="fas fa-check-circle"></i> <strong>Trust & Integrity:</strong> Fully transparent global structural partnerships.</div>
-                        <div class="value-item"><i class="fas fa-check-circle"></i> <strong>Flexibility:</strong> Exceptionally agile, tailored shipping and clearance logic.</div>
+                        <div class="value-item"><i class="fas fa-check-circle"></i> <strong>Flexible:</strong> Exceptionally agile, tailored shipping and clearance logic.</div>
                     </div>
                 </div>
                 <div class="about-image-frame">
                     <img src="shipping1.jpg" alt="Customs and Port Operations" class="about-actual-img">
+                </div>
+            </div>
+
+            <!-- STRATEGIC VISION & MISSION MODULES -->
+            <div class="strategic-grid-box">
+                <div class="strategic-panel-card">
+                    <h4>Vision</h4>
+                    <p>To emerge as a leading logistics and customs solutions provider, recognized for operational excellence, transparent partnerships, and adaptive services in a dynamic global trade environment.</p>
+                </div>
+                <div class="strategic-panel-card">
+                    <h4>Mission</h4>
+                    <p>To deliver integrated logistics and customs solutions with operational excellence, regulatory compliance, and reliability, by leveraging industry expertise, fostering transparent partnerships, and offering flexible, client-centric services that support seamless global trade.</p>
                 </div>
             </div>
         </section>
@@ -862,6 +1034,7 @@
                     <button class="service-menu-btn" onclick="switchServiceTab(event, 'tab-freight')">Freight Forwarding <i class="fas fa-chevron-right"></i></button>
                     <button class="service-menu-btn" onclick="switchServiceTab(event, 'tab-domestic')">Domestic & Logistics <i class="fas fa-chevron-right"></i></button>
                     <button class="service-menu-btn" onclick="switchServiceTab(event, 'tab-compliance')">Allied Compliance <i class="fas fa-chevron-right"></i></button>
+                    <button class="service-menu-btn" onclick="switchServiceTab(event, 'tab-industries')">Industries We Serve <i class="fas fa-chevron-right"></i></button>
                 </div>
 
                 <div class="services-tab-panels">
@@ -911,6 +1084,70 @@
                         </ul>
                     </div>
 
+                    <div id="tab-industries" class="service-tab-content">
+                        <h4 class="industries-headline">Industries We Serve</h4>
+                        <p>Tailored handling parameters and logistics expertise mapped across diverse corporate sectors.</p>
+                        <ul class="industries-list-box">
+                            <li class="industry-bullet-row"><i class="fas fa-square-full"></i> Chemicals & Polymers</li>
+                            <li class="industry-bullet-row"><i class="fas fa-square-full"></i> FMCG & Consumer Goods</li>
+                            <li class="industry-bullet-row"><i class="fas fa-square-full"></i> Engineering Goods & Machinery</li>
+                            <li class="industry-bullet-row"><i class="fas fa-square-full"></i> Textiles & Garments</li>
+                            <li class="industry-bullet-row"><i class="fas fa-square-full"></i> Pharmaceuticals & Healthcare Products</li>
+                            <li class="industry-bullet-row"><i class="fas fa-square-full"></i> Metals & Industrial Raw Materials</li>
+                            <li class="industry-bullet-row"><i class="fas fa-square-full"></i> Agro Commodities & Food Products</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========================================== -->
+    <!-- VIEW 4: COMPLIANCE & CREDENTIALS CONTAINER -->
+    <!-- ========================================== -->
+    <main id="compliance-view" class="page-view">
+        <section class="section-padding container">
+            <div class="about-split">
+                <div>
+                    <h3 style="font-size: 32px; color: var(--primary); margin-bottom: 20px;">Compliance & Credentials</h3>
+                    <p class="compliance-wrapper-text" style="margin-bottom: 15px; color: var(--dark);">At Shree Malan Shipping, compliance and regulatory integrity form the foundation of our operations. As a Licensed Customs Broker, we adhere strictly to applicable customs laws, trade regulations, and statutory requirements to ensure secure and risk-mitigated logistics solutions.</p>
+                    
+                    <div class="values-box">
+                        <div class="value-item" style="margin-bottom: 10px;"><i class="fas fa-check-circle"></i> <strong>Licensed Customs Broker –</strong> Authorized under the Customs Act to undertake customs clearance operations.</div>
+                        <div class="value-item" style="margin-bottom: 10px;"><i class="fas fa-check-circle"></i> <strong>GST Registered –</strong> Fully compliant with Goods and Services Tax regulations.</div>
+                        <div class="value-item" style="margin-bottom: 10px;"><i class="fas fa-check-circle"></i> <strong>Regulatory Compliance –</strong> Adherence to customs procedures, documentation standards, and statutory filings.</div>
+                        <div class="value-item" style="margin-bottom: 10px;"><i class="fas fa-check-circle"></i> <strong>Trade Documentation Expertise –</strong> Accurate handling of classification, valuation, and regulatory submissions.</div>
+                        <div class="value-item"><i class="fas fa-check-circle"></i> <strong>Ethical & Transparent Practices –</strong> Commitment to integrity, accountability, and compliance-driven operations.</div>
+                    </div>
+                </div>
+                
+                <div class="values-box" style="margin-top: 0; border-top: 4px solid var(--secondary);">
+                    <h3 style="font-size: 24px; color: var(--primary); margin-bottom: 15px; text-transform: uppercase;">Our Commitment</h3>
+                    <p class="compliance-wrapper-text" style="color: var(--gray); margin-bottom: 15px;">At Shree Malan Shipping, we are committed to delivering reliable, compliant, and efficient logistics solutions that support our clients' business objectives. Our approach is driven by operational excellence, ethical practices, and continuous improvement.</p>
+                    
+                    <ul class="commitment-list">
+                        <li class="commitment-item">
+                            <span class="commitment-number">1</span>
+                            <span style="font-size: 16px; color: var(--dark);">Ensure strict adherence to customs laws and regulatory requirements.</span>
+                        </li>
+                        <li class="commitment-item">
+                            <span class="commitment-number">2</span>
+                            <span style="font-size: 16px; color: var(--dark);">Deliver timely and accurate execution of logistics operations.</span>
+                        </li>
+                        <li class="commitment-item">
+                            <span class="commitment-number">3</span>
+                            <span style="font-size: 16px; color: var(--dark);">Maintain transparency and accountability in all client engagements.</span>
+                        </li>
+                        <li class="commitment-item">
+                            <span class="commitment-number">4</span>
+                            <span style="font-size: 16px; color: var(--dark);">Provide customized solutions aligned with client needs.</span>
+                        </li>
+                        <li class="commitment-item">
+                            <span class="commitment-number">5</span>
+                            <span style="font-size: 16px; color: var(--dark);">Continuously enhance processes through technology and best practices.</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -924,7 +1161,7 @@
                 <p>Licensed Customs Broker providing modern, highly transparent end-to-end global supply chain architecture out of Mundra.</p>
                 <div class="social-row">
                     <a href="https://www.instagram.com/shreemalanshipping?igsh=bmEwNTRhczYwdjY3" target="_blank" title="Follow Instagram Profile"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/919510924293" target="_blank" title="Open WhatsApp Chat Workspace"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://wa.me/91510924293" target="_blank" title="Open WhatsApp Chat Workspace"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
             
@@ -934,6 +1171,7 @@
                     <li><a onclick="switchView('home-view')">Home Desk Workspace</a></li>
                     <li><a onclick="switchView('about-view')">Corporate History Profile</a></li>
                     <li><a onclick="switchView('services-view')">Operational Capabilities Grid</a></li>
+                    <li><a onclick="switchView('compliance-view')">Compliance & Credentials</a></li>
                 </ul>
             </div>
 
@@ -1005,7 +1243,7 @@
             // Format message neatly with line-breaks for WhatsApp readability
             const whatsappText = `Hello Shree Malan Shipping,%0A%0AMy Name: ${encodeURIComponent(name)}%0AQuery: ${encodeURIComponent(question)}`;
             
-            const targetWhatsAppNumber = "919510924293";
+            const targetWhatsAppNumber = "91510924293";
             const fullWhatsAppUrl = `https://wa.me/${targetWhatsAppNumber}?text=${whatsappText}`;
             
             // Open the custom generated WhatsApp link in a clean new window panel
