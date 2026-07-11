@@ -19,6 +19,7 @@
             --gray: #57657a;          /* Adjusted slightly darker for enhanced readability */
             --white: #ffffff;
             --success: #25d366;        /* WhatsApp Green */
+            --email-blue: #0066cc;     /* Premium Email Blue Accent */
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -391,7 +392,7 @@
         }
 
         .form-wrapper {
-            max-width: 650px;
+            max-width: 680px;
             margin: 0 auto;
             background: var(--white);
             padding: 40px;
@@ -404,6 +405,13 @@
             flex-direction: column;
             gap: 20px;
             margin-top: 25px;
+        }
+
+        /* Split Row layout for inputs */
+        .form-row-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
         }
 
         .form-group label {
@@ -429,29 +437,36 @@
             border-color: var(--primary);
         }
 
-        .submit-btn {
-            background: var(--success); /* WhatsApp Green Accent */
+        /* Dual button action cluster configuration */
+        .dual-btn-cluster {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .action-submit-btn {
             color: var(--white);
-            width: 100%;
             padding: 15px;
             border: none;
             border-radius: 4px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin-top: 15px;
             cursor: pointer;
             transition: var(--transition);
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
-            font-size: 16px;
+            font-size: 15px;
         }
 
-        .submit-btn:hover {
-            background: #1eb854;
-        }
+        .btn-wa-style { background-color: var(--success); }
+        .btn-wa-style:hover { background-color: #1eb854; }
+
+        .btn-email-style { background-color: var(--email-blue); }
+        .btn-email-style:hover { background-color: #0052cc; }
 
         /* --- PAGE 2: ABOUT US VIEWS --- */
         .about-split {
@@ -796,7 +811,6 @@
                 justify-content: center;
                 gap: 12px;
             }
-            /* MOBILE SCREEN CONTAINER SCALING - HIGH VISIBILITY COMPACT PRESET */
             .logo-img {
                 width: 55px;
                 height: 55px;
@@ -832,6 +846,8 @@
             .hero-content h2 { font-size: 34px; }
             .hero-content p { font-size: 17px; }
             .section-header h3 { font-size: 28px; }
+            .form-row-split { grid-template-columns: 1fr; gap: 20px; }
+            .dual-btn-cluster { grid-template-columns: 1fr; gap: 15px; }
         }
     </style>
 </head>
@@ -961,27 +977,43 @@
             </div>
         </section>
 
-        <!-- Secure Form Area using shipping3.jpg (Configured strictly for direct WhatsApp messaging) -->
+        <!-- Secure Form Area configured for direct WhatsApp and Email messaging -->
         <section class="section-padding form-section" id="inquiry-form-section">
             <div class="form-wrapper">
                 <div style="text-align: center; margin-bottom: 20px;">
                     <h3 style="color: var(--primary); font-size: 26px;">Have a Question?</h3>
-                    <p style="color: var(--gray); font-size: 14px; margin-top: 5px;">Type your details below to instantly connect with us on WhatsApp.</p>
+                    <p style="color: var(--gray); font-size: 14px; margin-top: 5px;">Type your details below to instantly connect with us via Email or WhatsApp.</p>
                 </div>
-                <form id="whatsappQuestionForm">
+                <form id="dualRoutingQuestionForm">
                     <div class="form-grid">
                         <div class="form-group">
                             <label>Your Name</label>
                             <input type="text" id="senderName" required placeholder="Enter your full name">
                         </div>
+                        <div class="form-row-split">
+                            <div class="form-group">
+                                <label>Your Contact Number</label>
+                                <input type="tel" id="senderPhone" required placeholder="Enter phone number">
+                            </div>
+                            <div class="form-group">
+                                <label>Your Email Address</label>
+                                <input type="email" id="senderEmail" required placeholder="Enter email address">
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label>Your Question</label>
-                            <textarea id="senderQuestion" rows="5" required placeholder="Type your specific query or information check here..."></textarea>
+                            <textarea id="senderQuestion" rows="4" required placeholder="Type your specific query or information check here..."></textarea>
                         </div>
                     </div>
-                    <button type="submit" class="submit-btn">
-                        <i class="fab fa-whatsapp"></i> Send Question via WhatsApp
-                    </button>
+                    <!-- Dual button container cluster -->
+                    <div class="dual-btn-cluster">
+                        <button type="button" onclick="sendViaWhatsApp()" class="action-submit-btn btn-wa-style">
+                            <i class="fab fa-whatsapp"></i> Send via WhatsApp
+                        </button>
+                        <button type="button" onclick="sendViaEmail()" class="action-submit-btn btn-email-style">
+                            <i class="fas fa-envelope"></i> Send via Email
+                        </button>
+                    </div>
                 </form>
             </div>
         </section>
@@ -1209,7 +1241,7 @@
         </div>
     </footer>
 
-    <!-- --- UI/UX & WHATSAPP INTERACTION SCRIPT --- -->
+    <!-- --- UI/UX & DUAL ROUTING INTERACTION SCRIPT --- -->
     <script>
         // Tab Page Switcher Navigation
         function switchView(viewId) {
@@ -1239,22 +1271,43 @@
             document.getElementById(contentId).classList.add('active-content');
         }
 
-        // Intercept Form Submission and Launch Custom WhatsApp Message API Link
-        document.getElementById('whatsappQuestionForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            
+        // Form Validation Utility
+        function checkFormValidity() {
             const name = document.getElementById('senderName').value.trim();
+            const phone = document.getElementById('senderPhone').value.trim();
+            const email = document.getElementById('senderEmail').value.trim();
             const question = document.getElementById('senderQuestion').value.trim();
+
+            if (!name || !phone || !email || !question) {
+                alert("Please fill out all the fields before sending your question.");
+                return null;
+            }
+            return { name, phone, email, question };
+        }
+
+        // Action 1: Launch Custom Generated WhatsApp Message Link
+        function sendViaWhatsApp() {
+            const data = checkFormValidity();
+            if (!data) return;
             
-            // Format message neatly with line-breaks for WhatsApp readability
-            const whatsappText = `Hello Shree Malan Shipping,%0A%0AMy Name: ${encodeURIComponent(name)}%0AQuery: ${encodeURIComponent(question)}`;
-            
+            const whatsappText = `Hello Shree Malan Shipping,%0A%0AMy Name: ${encodeURIComponent(data.name)}%0AContact: ${encodeURIComponent(data.phone)}%0AEmail: ${encodeURIComponent(data.email)}%0AQuery: ${encodeURIComponent(data.question)}`;
             const targetWhatsAppNumber = "91510924293";
-            const fullWhatsAppUrl = `https://wa.me/${targetWhatsAppNumber}?text=${whatsappText}`;
             
-            // Open the custom generated WhatsApp link in a clean new window panel
-            window.open(fullWhatsAppUrl, '_blank');
-        });
+            window.open(`https://wa.me/${targetWhatsAppNumber}?text=${whatsappText}`, '_blank');
+        }
+
+        // Action 2: Trigger Native Email Client Mailto Loop Routing
+        function sendViaEmail() {
+            const data = checkFormValidity();
+            if (!data) return;
+            
+            const targetEmail = "mktg.shreemalan@gmail.com";
+            const subject = `New Shipping & Logistics Inquiry from ${data.name}`;
+            
+            const emailBody = `Hello Shree Malan Shipping Team,\n\nYou have received a new inquiry from your website:\n\nName: ${data.name}\nPhone: ${data.phone}\nEmail: ${data.email}\n\nQuery Details:\n${data.question}`;
+            
+            window.location.href = `mailto:${targetEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+        }
     </script>
 </body>
     </html>
